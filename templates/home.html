@@ -11,16 +11,28 @@
       height: 360px;
       width: 100%;
       object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
 </head>
 <body>
   {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="static/banner.jpg" alt="Banner background">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-    <img class="img-fluid" id="banner" src="static/banner.jpg" alt="Banner background">
+    
     <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id metus nunc. Fusce fermentum, enim ac accumsan interdum, urna ipsum malesuada lacus, quis molestie dolor leo sit amet enim. Mauris sed posuere orci. Quisque sed laoreet dolor. Duis at nisl facilisis, suscipit odio et, vulputate tortor. Donec dictum dolor neque. In a convallis urna, et commodo metus. Proin velit risus, mollis quis tempor quis, lobortis ut risus. Nulla quis vulputate risus. Integer lacinia nisl sit amet aliquam ornare. Praesent consequat aliquam tellus, vel gravida tellus pretium ut. Sed justo nunc, tempor id tortor sit amet, varius pulvinar mauris. Integer luctus dui id sem eleifend gravida. Proin varius mauris sit amet sem fringilla, eu egestas nisi dapibus. Nulla in urna sed arcu placerat ullamcorper. Maecenas massa risus, porttitor vitae purus in, tristique rhoncus purus.</p>
+    <div class="row" style="margin-bottom:26px">
+      <div class="col-md-6">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id metus nunc. Fusce fermentum, enim ac accumsan interdum, urna ipsum malesuada lacus, quis molestie dolor leo sit amet enim. Mauris sed posuere orci. Quisque sed laoreet dolor. Duis at nisl facilisis, suscipit odio et, vulputate tortor. Donec dictum dolor neque. In a convallis urna, et commodo metus. Proin velit risus, mollis quis tempor quis, lobortis ut risus. Nulla quis vulputate risus. Integer lacinia nisl sit amet aliquam ornare.Varius pulvinar mauris. Integer luctus dui id sem eleifend gravida. Proin varius mauris sit amet sem fringilla, eu egestas nisi dapibus. Nulla in urna sed arcu placerat ullamcorper. Maecenas massa risus, porttitor vitae purus in, tristique rhoncus purus.
+    </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+      <img style="height:320px;border-radius:4px;" src="static/annie-spratt-devs.jpg" alt="An image of devs working">
+      </div>
+    </div>
+
+    
     <h2 class="text-center mt-2 mb-4">Job openings</h2>
     <div>
       {% for job in jobs%}
@@ -32,5 +44,8 @@
     </div>
     
  </div> 
+
+  {% include 'footer.html' %}
+  
 </body>
 </html>
